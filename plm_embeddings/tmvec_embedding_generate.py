@@ -78,8 +78,8 @@ else:
 
 if args.protrans_model is None:
     # Load the ProtTrans model and ProtTrans tokenizer
-    tokenizer = T5Tokenizer.from_pretrained("Rostlab/prot_t5_xl_uniref50", do_lower_case=False )
-    model = T5EncoderModel.from_pretrained("Rostlab/prot_t5_xl_uniref50")
+    tokenizer = T5Tokenizer.from_pretrained("../Rostlab/prot_t5_xl_uniref50", do_lower_case=False )
+    model = T5EncoderModel.from_pretrained("../Rostlab/prot_t5_xl_uniref50")
 else:
     tokenizer = T5Tokenizer.from_pretrained(args.protrans_model, do_lower_case=False )
     model = T5EncoderModel.from_pretrained(args.protrans_model)
