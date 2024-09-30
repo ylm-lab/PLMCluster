@@ -18,7 +18,7 @@ parser = argparse.ArgumentParser(description='Process TM-Vec arguments', add_hel
 parser.add_argument("--input-embedding",
                     type=Path,
                     required=False,
-                    default="./example/result/embeddings.npy",
+                    default="../example/result/embeddings.npy",
                     help=("Input embedding in pkl format to encode LSH.")
                     )
 
@@ -35,8 +35,8 @@ dim = 512 #dimension of input embedding vector
 # local storage for numpy uniform random planes, overwrite matrix file
 lsh = LSHash(hash_size=k, input_dim = dim, num_hashtables = L,\
              storage_config={ 'dict': None },
-             matrices_filename='./example/weights.npz',
-             hashtable_filename='./example/hash.npz',
+             matrices_filename='../example/weights.npz',
+             hashtable_filename='../example/hash.npz',
              overwrite=True)
 
 # 
